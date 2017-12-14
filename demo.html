@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .wrap div {
+            margin: 10px auto;
+        }
+
+        .demo-1 .radius {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #00a1ff;
+            border-radius: 10px;
+        }
+
+        .demo-1 .circle {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #00a1ff;
+            border-radius: 50%;
+        }
+
+        .demo-2 .shadow {
+            width: 40px;
+            height: 40px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+        }
+
+        .demo-3 .zoom-in,.demo-3 .reduce{
+            width: 80px;
+            height: 80px;
+            background: #00a1ff;
+        }
+        .zoom-in:hover {
+            transform: scale(2);
+        }
+
+        .reduce:hover {
+            transform: scale(0.5);
+        }
+        .demo-3 .move{
+            width: 80px;
+            height: 80px;
+            background: #00a1ff;
+            position: relative;
+        }
+        .move:hover{
+            transform: translate(150%)
+        }
+        .demo-3 .rotate{
+            width: 80px;
+            height:80px;
+            background: #00a1ff;
+        }
+        .rotate:hover{
+            transform:  rotate(150deg);
+        }
+        .demo-4 div{
+            width: 80px;
+            height: 80px;
+            background: #00a1ff;
+            position: relative;
+        }
+        .move3d:hover{
+            transform: translate3d(10px,10px,0)
+        }
+        .rotate3d:hover{
+            transform: perspective(300px) rotatey(45deg);
+        }
+        .demo-5 .shade{
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to bottom,#00a1ff,white)
+        }
+        .demo-6 .changecover{
+            width: 80px;
+            height: 80px;
+            background: #00a1ff;
+            transition: 2s;
+        }
+        .changecover:hover{
+            background: white;
+        }
+        .demo-7 .animation{
+            width: 80px;
+            height: 80px;
+            background: #00a1ff;
+            animation: changecover 2s infinite;
+        }
+        @keyframes changecover {
+            50%{ background: white}
+            100%{background: #00a1ff}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="demo-1">
+            <div class="radius"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="demo-2">
+            <div class='shadow'></div>
+        </div>
+        <div class="demo-3">
+            <div class='zoom-in'>鼠标放上来变大</div>
+            <div class='reduce'>鼠标放上来变小</div>
+            <div class='move'>鼠标放上来移动</div>
+            <div class="rotate">鼠标放上来旋转</div>
+        </div>
+        <div class='demo-4'>
+            <div class="move3d">鼠标放上来移动</div>
+            <div class="rotate3d">鼠标放上来旋转</div>
+        </div>
+        <div class="demo-5">
+            <div class="shade"></div>  
+        </div>
+        <div class='demo-6'>
+            <div class="changecover">点我过渡</div>
+        </div>
+        <div class='demo-7'>
+            <div class='animation'></div>
+        </div>
+    </div>
+</body>
+
+</html>

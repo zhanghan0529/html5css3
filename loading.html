@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background: rgb(6, 215, 243);
+        }
+
+        .demo {
+            padding: 100px;
+        }
+
+        .demo>div {
+            margin: 20px auto;
+        }
+
+        .demo-1 {
+            width: 10px;
+            height: 50px;
+            background: white;
+            position: relative;
+            top: 0;
+            animation: loading1 1s infinite ease-in-out;
+        }
+
+        .demo-1:before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 50px;
+            background: white;
+            left: 15px;
+            animation: loading1 1s 0.16s infinite ease-in-out;
+            /* margin: 0 20px; */
+        }
+
+        .demo-1:after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 50px;
+            background: white;
+            left: 30px;
+            animation: loading1 1s 0.32s infinite ease-in-out;
+            /* margin: 0 20px; */
+        }
+
+        @keyframes loading1 {
+            10% {
+                box-shadow: 0px -10px white;
+                height: 55px;
+            }
+            80%,
+            100% {
+                height: 50px;
+                box-shadow: 0px 0px white;
+            }
+
+        }
+        .demo-2{
+            width: 100px;
+            height: 100px;
+            border: 15px solid rgba(255,255,255,0.3);
+            border-top: 15px solid white;
+            border-radius: 50%;
+            animation: rotate 1s linear infinite;
+        }
+        @keyframes rotate{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo">
+        <div class='demo-1'></div>
+        <div class="demo-2"></div>
+    </div>
+</body>
+
+</html>
